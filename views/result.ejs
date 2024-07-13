@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.46.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+     <style>
+      body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+      }
+      .navbar {
+          height: 20px;
+          width: 100%;
+          background-color: #333;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+      }
+      .campus {
+          font-weight: bold;
+      }
+      .profile {
+          display: flex;
+          align-items: center;
+      }
+      .profile img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 5px;
+      }
+      sidebar {
+            width: 50px;
+            height: 100vh;
+            background-color: #bb6161;
+            position: fixed;
+            left: 0;
+            top: 20px; /* Adjust according to navbar height */
+            z-index: 1; /* Ensure sidebar is above content */
+        }
+        .nav {
+          list-style: none;
+          font-size: 20px;
+          margin-top: 50px;
+        }
+        .nav li {
+          margin-bottom: 20px;
+          display: block;
+          margin-left: 50px;
+          text-decoration: underline;
+        }
+        .nav li a {
+          font-size: 17px;
+          font-weight: 500;
+          display: block;
+          border-bottom: 1px solid var(--bg-black-50);
+          padding: 5px 15px;
+          
+        }
+        .nav li a i {
+          margin-right: 25px; /* Adjust as needed */
+        }
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+      }
+      .navbar {
+          height: 20px;
+          width: 100%;
+          background-color: #333;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+      }
+      .campus {
+          font-weight: bold;
+      }
+      .profile {
+          display: flex;
+          align-items: center;
+      }
+      .profile img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 5px;
+      }
+        
+  </style>
+  </head>
+  <body>
+   
+    <div class="navbar">
+      <div class="campus">Campus</div>
+      <div class="profile">
+          <img src="images/profile.png" alt="Profile Image">
+          <div class="name" style="font-size: 20px; margin-right: 60px;">John Doe</div>
+      </div>
+  </div>
+  <div style="display: flex;">
+  <div class="row1" style="width: 400px; background-color: rgb(232, 232, 232); height: 91vh;">
+    <div class="" style="display: flex; margin-top: 10px;margin-left: 20px;">
+      <div class="img">
+        <img src="images/profile.png" class="rounded-full w-14  mx-auto " style="margin-top: 10px;"  alt="Avatar"/>
+      </div>
+     
+      </div>
+    <hr class="my-5 border-gray-500">
+    <ul class="nav">
+      <li><a href="#" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
+      <li><a href="#"><i class="fa-solid fa-circle-play"></i>My Tests</a></li>
+      <li><a href="#"><i class="fa-solid fa-square-poll-vertical"></i>My Result</a></li>
+      <li><a href="#"><i class="fa-solid fa-gear"></i>Settings</a></li>
+    </ul>
+  </div>
+  
+    <div class="container w-full  flex items-center justify-center" style="margin-top: 10px; margin-right: 20px; margin-bottom: 130px;">
+      <div class="result w-1/2   flex flex-col ">
+        <div class="header w-full h-40 flex flex-row">
+         
+          <div class="information w-2/3  h-40 flex flex-col gap-y-6 justify-center px-5">
+                    
+           
+          </div>
+        </div>
+        <div class="text-white text-xl mb-4 " style="color: black; font-size: 20px; gap: 10px;">
+          <p>Name: </p>
+          <p>Email: </p>
+        </div>
+         <div class="resultper flex flex-col bg-slate-600 w-full">
+         
+          <table class="w-600px">
+            <tr class="text-xl m-1 text-white border-white border-2 h-8 justify-center flex">
+              <td>Result</td>
+            </tr>
+            <tr class="flex flex-row">
+              <td class="w-1/2 text-xl m-1 text-white border-white border-2 h-8 justify-center flex">Total Question</td>
+              <td class="w-1/2 text-xl m-1 text-white border-white border-2 h-8 justify-center flex">24</td>
+            </tr>
+            <tr class="flex flex-row">
+              <td class="w-1/2 m-1 flex justify-center h-8 border-2 border-white text-xl text-white">Attempt Question</td>
+              <td class="w-1/2 m-1 flex justify-center h-8 border-2 border-white text-xl text-white"><%=attempt%></td>
+            </tr>
+            <tr class="flex flex-row">
+              <td class="w-1/2 m-1 flex justify-center h-8 border-2 border-white text-xl text-white">Skipped Question</td>
+              <td class="w-1/2 m-1 flex justify-center h-8 border-2 border-white text-xl text-white"><%=skip%></td>
+            </tr>
+            <tr class="flex flex-row">
+              <td class="w-1/2 m-1 flex justify-center h-8 border-2 border-white text-xl text-white">Correct Answer</td>
+              <td class="w-1/2 m-1 flex justify-center h-8 border-2 border-white text-xl text-white"><%=correct%></td>
+            </tr>
+            <tr class="flex flex-row">
+              <td class="w-1/2 m-1 flex justify-center h-8 border-2 border-white text-xl text-white">Wrong Answer</td>
+              <td class="w-1/2 m-1 flex justify-center h-8 border-2 border-white text-xl text-white"><%=wrong%></td>
+            </tr>
+          </table>
+        
+          <canvas id="myPieChart" width="400" height="400"></canvas>
+        
+          <script src="report.js"></script>
+         </div>
+         <div>
+              <form action="/test" method="post">
+      <div class="btn1" style="display: flex; gap: 40px;">
+        <div><button type="submit" id="submit" name="btn" value="restart" class=" d-flex  text-center w-40 h-12 px-7 py-2.5 bg-red-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg  focus:bg-red-800" style="margin-left: 120px; margin-top: 20px; font-size: 15px;">New test</button> </div>
+        <div><button type="submit"  id="submit" name="btn"  class=" d-flex  text-center w-40 h-12 px-7 py-2.5  text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg  focus:bg-red-800" style="background-color: green; margin-top: 20px; font-size: 15px;"><a href="report.html">Report</a></button> </div>
+      </div>
+    </form>
+         </div>
+       
+      </div>
+    </div>
+    </div>
+    <!-- <form action="/test" method="post">
+      <div class="btn1" style="display: flex; gap: 40px;">
+        <div><button type="submit" id="submit" name="btn" value="restart" class=" d-flex  text-center w-40 h-12 px-7 py-2.5 bg-red-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg  focus:bg-red-800" style="margin-left: 590px; margin-top: 20px; font-size: 15px;">New test</button> </div>
+        <div><button type="submit" id="submit" name="btn" value="restart" class=" d-flex  text-center w-40 h-12 px-7 py-2.5  text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg  focus:bg-red-800" style="background-color: green; margin-top: 20px; font-size: 15px;">Report</button> </div>
+      </div>
+    </form> -->
+  </body>
+ <script src="../javaScript/script.js"></script>
+</html>
+
+
+ <!-- <div class="res w-full  ">
+          <div class="headline text-3xl text-black p-3">Result</div>
+          <div class="record flex flex-row my-1">
+            <div class="question  m-1 w-4/6 flex flex-col">
+              <div class="h1 text-2xl text-white w-full bg-base-100 border-2  border-white flex justify-center">
+                Question
+              </div>
+              <div class="QuestionA text-black">
+                <div class="1 h-20 bg-slate-400 border-2 border-black m-1 flex px-3 ">1. Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio saepe modi quis ipsam.</div>
+                <div class="3 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="2 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
+                <div class="4 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="5 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">5. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="6 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">6. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="7 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">7. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="8 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">8. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="9 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">9. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="10 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">10. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="11 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">11. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="12 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">12. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="13 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">13. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="14 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">14. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="15 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">15. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="16 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">16. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="17 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">17. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="18 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">18. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="19 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">19. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="20 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">20. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="21 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">21. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="22 h-20 bg-slate-400  border-2 border-black m-1  flex px-3">22. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="23 h-20  bg-slate-400  border-2 border-black m-1 flex px-3">23. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="24 h-20  bg-slate-400  border-2 border-black m-1 flex px-3">24. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <div class="25 h-20  bg-slate-400  border-2 border-black m-1 flex px-3">25. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+              </div>
+            </div>
+            <div class="respond m-1 w-1/6  flex flex-col ">
+              <div class="h1  text-2xl text-white w-full bg-base-100  flex justify-center border-2  border-white">
+                Respond
+              </div>
+              <div class="respontA  text-black">
+                <div class="1 h-20 flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Chosse:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:C</div>
+                <div class="1 h-20 flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Chosse:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:C</div>
+                <div class="1 h-20 flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Chosse:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:C</div>
+                <div class="1 h-20 flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Chosse:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:C</div>
+                <div class="1 h-20 flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Chosse:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:C</div>
+                <div class="1 h-20 flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Chosse:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:C</div>
+                <div class="1 h-20 flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Chosse:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:C</div>
+                <div class="1 h-20 flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Chosse:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:C</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Choose:C</div>
+              </div> 
+            </div>
+            <div class="answer w-1/6 flex flex-col m-1 ">
+              <div class="h1  text-2xl text-white w-full bg-base-100 border-2  border-white flex justify-center">
+                Answer
+              </div>
+              <div class="AnswerA   text-black ">
+                <div class="1 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Corerect:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Correct:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">correct:C</div>
+                <div class="1 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Corerect:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Correct:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">correct:C</div>
+                <div class="1 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Corerect:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Correct:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">correct:C</div>
+                <div class="1 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Corerect:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Correct:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">correct:C</div>
+                <div class="1 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Corerect:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Correct:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">correct:C</div>
+                <div class="1 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Corerect:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Correct:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">correct:C</div>
+                <div class="1 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Corerect:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Correct:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">correct:C</div>
+                <div class="1 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Corerect:A</div>
+                <div class="2 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">Correct:B</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">correct:C</div>
+                <div class="3 h-20  flex justify-center border-black border-2 bg-slate-500 items-center m-1">correct:C</div>
+              </div>
+            </div>
+          </div>
+        </div> -->

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link   rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"    />
+    <link  href="https://cdn.jsdelivr.net/npm/daisyui@2.46.0/dist/full.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.green.css" />
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+      </script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <style>
+        .nav {
+          list-style: none;
+          font-size: 20px;
+          margin-top: 50px;
+        }
+        .nav li {
+          margin-bottom: 20px;
+          display: block;
+          margin-left: 50px;
+          text-decoration: underline;
+        }
+        .nav li a {
+          font-size: 17px;
+          font-weight: 500;
+          display: block;
+          border-bottom: 1px solid var(--bg-black-50);
+          padding: 5px 15px;
+          
+        }
+        .nav li a i {
+          margin-right: 25px; /* Adjust as needed */
+        }
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+      }
+      .navbar {
+          height: 20px;
+          width: 100%;
+          background-color: #333;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+      }
+      .campus {
+          font-weight: bold;
+      }
+      .profile {
+          display: flex;
+          align-items: center;
+      }
+      .profile img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 5px;
+      }
+      .slider-container {
+    position: relative;
+    width: 90%; /* Adjusted width */
+    max-width: 1200px; /* Maximum width if needed */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 100%; /* Full width of the container */
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 100%; /* Each slide takes full width of the slider */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector(".slider");
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
+    const slideWidth = document.querySelector(".slide").offsetWidth;
+    let currentIndex = 0;
+
+    // Next button click handler
+    nextButton.addEventListener("click", function() {
+        if (currentIndex < slider.children.length - 1) {
+            currentIndex++;
+            slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+        }
+    });
+
+    // Previous button click handler
+    prevButton.addEventListener("click", function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+        }
+    });
+});
+
+      </script>
+    
+  </head>
+<body>
+    <div class="navbar flex items-center justify-between px-4 py-3 bg-gray-800 text-white">
+        <!-- Left side -->
+        <div class="campus text-lg font-bold"><img src="/public/images/logo.png" style="width: 50px; height: 50px;margin-left: 20px;" >
+            <h2 style="margin-left: 20px; font-size: 20px; font-family: Arial, Helvetica, sans-serif;">Aptitude Test</h2>
+        </div>
+    
+        <!-- Right side navigation links -->
+        <div class="flex items-center space-x-2">
+            <a href="#" class="nav-link px-12">Home</a>
+            <a href="#" class="nav-link px-12">About Us</a>
+            <a href="#" class="nav-link px-12">Login</a>
+            <a href="#" class="nav-link px-12">Register</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="/public/images/ap4.png" alt="Image 1"></div>
+            <div class="slide"><img src="/public/images/ap3.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="/public/images/ap4.png" alt="Image 3"></div>
+            <!-- Add more slides with different images as needed -->
+        </div>
+        <button class="prev-button">Prev</button>
+        <button class="next-button">Next</button>
+    </div>
+    
+    
+    
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>    
+</body>
+</html>
